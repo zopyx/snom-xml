@@ -12,8 +12,8 @@ def my_view(request):
 @view_config(name='incoming-call', renderer='templates/incoming-call.pt')
 def incoming_call(request):
 
+#    number = '06897768639'
     number = request.params['number']
-    number = '06897768639'
     params = dict(key=API_KEY, number=number)
     result = requests.get('http://openapi.klicktel.de/searchapi/invers', params=params)
     if result.status_code == 200:
