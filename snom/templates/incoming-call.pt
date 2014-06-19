@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneText>
+    <Title>Incoming call lookup</Title>
+    <Prompt>Prompt Text</Prompt>
+    <Text>Incoming call from
+        <br/>
+        <span tal:replace="entry.displayname" />
+        <br/>
+        <span tal:replace="entry.location.street" />
+        <span tal:replace="entry.location.streetnumber" />
+        <br/>
+        <span tal:replace="entry.location.country" />
+        <span tal:replace="entry.location.zipcode" />
+        <span tal:replace="entry.location.city" />
+    </Text>
+</SnomIPPhoneText>
