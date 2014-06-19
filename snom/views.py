@@ -15,6 +15,7 @@ def incoming_call(request):
 #    number = '06897768639'
     number = request.params['number']
     number = number.replace('@sipgate.de', '')
+    number = number.replace('+49', '0')
     params = dict(key=API_KEY, number=number)
     result = requests.get('http://openapi.klicktel.de/searchapi/invers', params=params)
     if result.status_code == 200:
